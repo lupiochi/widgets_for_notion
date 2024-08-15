@@ -1,0 +1,156 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+#main-header {
+    background-color: #2d545e;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#main-header h1 {
+    margin-bottom: 15px;
+    font-size: 2.5em;
+}
+
+#main-header p {
+    font-size: 1.2em;
+}
+
+#main-header nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#main-header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#main-header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-bottom: 2px solid transparent;
+}
+
+#main-header nav ul li a:hover {
+    border-bottom: 2px solid #88c399;
+}
+
+/* Widget Section Styles */
+.widget-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.widget-section .major {
+    margin-bottom: 40px;
+}
+
+.widget-section h2 {
+    font-size: 2.2em;
+    color: #2d545e;
+}
+
+.widget-section p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Widget Grid */
+.widget-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Widget Item */
+.widget-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.widget-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Widget Image */
+.widget-image-container {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.widget-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Widget Button */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2d545e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+footer .social-icons li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer .social-icons li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+footer p {
+    font-size: 1em;
+    margin-top: 10px;
+}

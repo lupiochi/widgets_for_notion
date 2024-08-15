@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="looks.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+  <div class="container">
+    <h1>Pomodoro Timer</h1>
+    <div id="timer">25:00</div>
+    <div class="controls">
+      <button id="start-button" onclick="startTimer()">Start</button>
+      <button id="pause-button" onclick="pauseTimer()">Pause</button>
+      <button id="reset-button" onclick="resetTimer()">Reset</button>
+      <button onclick="openSettings()">Settings</button>
+    </div>
+  
+    <!-- Popup Modal for Settings -->
+    <div id="settings-modal" class="settings-modal hidden">
+      <div class="settings-content">
+        <h2>Settings</h2>
+        <label for="pomodoroTime">Pomodoro (min):</label>
+        <input type="number" id="pomodoroTime" value="25" min="1">
+        <label for="shortBreakTime">Short Break (min):</label>
+        <input type="number" id="shortBreakTime" value="5" min="1">
+        <label for="longBreakTime">Long Break (min):</label>
+        <input type="number" id="longBreakTime" value="15" min="1">
+        <br>
+        <button onclick="saveSettings()">Save</button>
+        <button onclick="closeSettings()">Close</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="scripts.js"></script>
+</body>
+</html>
