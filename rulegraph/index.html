@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rulegraph Assistant</title>
+    <link rel="stylesheet" href="looks.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Rulegraph Assistant</h1>
+        <p>The Rulegraph Assistant is an interactive tool for visualizing and managing workflow pipelines. <br>
+            Click on two or more steps in the graph to define, change, or remove their relationship. You can also add steps using the form below, customize their statuses, and set dependencies. <br>
+            The graph will update automatically as you modify the workflow, allowing you to display your pipelines with ease.</p>
+
+        <!-- Form for adding steps -->
+        <div id="workflow-form">
+            <input type="text" id="stepName" placeholder="Step Name">
+            <select id="dependency" class="dependency-dropdown">
+                <option value="" disabled selected>Select a Dependency</option>
+            </select>
+            <select id="stepStatus">
+                <option value="notStarted">Not Started</option>
+                <option value="inProgress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>
+            <select id="relationshipType">
+                <option value="solid">Solid Line</option>
+                <option value="dashed">Dashed Line</option>
+                <option value="thick">Thick Line</option>
+                <option value="dotted">Dotted Line</option>
+                <option value="remove">Remove Relationship</option>
+            </select>
+            <button id="addStep">Add Step</button>
+        </div>
+
+        <!-- Relationship Editor -->
+        <div id="relationship-form" class="hidden">
+            <p>Selected Nodes: <span id="selectedNodes"></span></p>
+            <select id="relationshipEditor">
+                <optgroup label="Solid Lines">
+                    <option value="solid">Solid Line</option>
+                    <option value="thick">Thick Line</option>
+                </optgroup>
+                <optgroup label="Dashed Lines">
+                    <option value="dashed">Dashed Line</option>
+                    <option value="dotted">Dotted Line</option>
+                </optgroup>
+                <optgroup label="Remove">
+                    <option value="remove">Remove Relationship</option>
+                </optgroup>
+            </select>
+            <button id="updateRelationship">Update Relationship</button>
+        </div>
+
+        <!-- Area for the graph -->
+        <div id="graph"></div>
+
+        <!-- Controls -->
+        <div id="controls">
+            <button id="clearGraph">Clear</button>
+            <button id="undoStep">Undo</button>
+            <button id="saveGraph">Save Graph as PNG</button>
+        </div>
+    </div>
+
+    <!-- vis.js for graph generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+
+</html>
