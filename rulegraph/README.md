@@ -5,6 +5,10 @@
 
 The Rulegraph Assistant is a flexible tool designed for visualizing pipeline or workflow graphs, akin to Snakemake's DAG plots. It allows users to interactively define relationships between steps, visualize workflows, and manipulate them directly in Notion. This tool is ideal for creating and managing complex workflows with clarity.
 
+The Rulegraph Assistant is an interactive tool for visualizing and managing workflow pipelines.
+Click on two or more steps in the graph to define, change, or remove their relationship. You can also add steps using the form below, customize their statuses, and set dependencies.
+The graph will update automatically as you modify the workflow, allowing you to display your pipelines with ease.
+
 ### Features
 1. Add Steps: Create steps with custom names and statuses (e.g., Not Started, In Progress, Completed).
 2. Relationship Management: Define relationships between steps using various line styles and colors (solid, dashed, thick, blue arrows, red arrows, etc.).
